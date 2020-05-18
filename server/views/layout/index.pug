@@ -5,7 +5,7 @@ html(lang="en")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     title Document
     link(href='https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Open+Sans:wght@400;700&family=Staatliches&display=swap', rel='stylesheet')
-    
+
     // Cargando Boostrap desde su CDN
     link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css')
     
@@ -13,4 +13,6 @@ html(lang="en")
     link(rel="stylesheet", href="/css/style.css")
 
   body
+    include includes/header
     block contenido
+    block footer
