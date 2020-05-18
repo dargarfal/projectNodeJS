@@ -13,6 +13,9 @@ app.set('view engine', 'pug'); //Definimos Template Engine a utlizar
 //Añadir las vistas
 app.set('views', path.join(__dirname, './views')); //Definimos donde encontrar las vistas
 
+//Cargar una carpeta estatica  public/
+app.use(express.static('public'));
+
 //Cargando rutas
 app.use('/', routes());
 
