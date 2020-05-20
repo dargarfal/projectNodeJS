@@ -3,7 +3,7 @@ html(lang="en")
   head
     meta(charset="UTF-8")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    title Document
+    title #{titulo} | #{pagina}
     link(href='https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Open+Sans:wght@400;700&family=Staatliches&display=swap', rel='stylesheet')
 
     // Cargando Boostrap desde su CDN
@@ -15,4 +15,4 @@ html(lang="en")
   body
     include includes/header
     block contenido
-    block footer
+    include includes/footer
