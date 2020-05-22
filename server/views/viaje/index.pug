@@ -1,0 +1,19 @@
+extends ../layout/index
+
+block contenido
+  main.container.mt-5
+    .row
+      .col-md-5
+        img(src=`/img/destinos_${viaje.imagen}_ln.jpg`, class="img-fluid")
+      .col-md-7
+        h1 #{viaje.titulo}
+        p
+          i.fas.fa-calendar-alt
+          |  Fecha de ida: #{viaje.fecha_ida} - Fecha de vuelta: #{viaje.fecha_vuelta}
+        p
+          i.fas.fa-dollar-sign
+          |  #{viaje.precio}
+        p
+          i.fas.fa-users
+          |  #{viaje.disponibles} Disponibles
+        p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur quam felis, sollicitudin eu mauris vel, interdum lobortis risus. Aliquam nibh leo, volutpat pharetra pretium at, eleifend nec mi. Sed a eros aliquet, consequat erat eu, scelerisque nisi. Maecenas accumsan ligula auctor auctor sodales. Morbi at leo tellus. Suspendisse ac augue blandit, tincidunt massa eu, egestas lorem. Phasellus eget ultrices est, vitae efficitur leo. Sed faucibus fermentum condimentum. Sed ac justo pretium turpis cursus ullamcorper non eget diam. Duis euismod faucibus nunc, eget egestas turpis blandit ut. Aenean sit amet lorem nulla. Ut vitae ornare leo. Sed et elementum massa.  
