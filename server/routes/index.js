@@ -17,7 +17,7 @@ module.exports = function(){
     });
   });
 
-  router.get("/viajes", (req, res) => { //Definimos ruta para Inicio
+  router.get("/viajes", (req, res) => { //Definimos ruta para Viajes
     Viaje.findAll()
       .then(viajes => res.render("viajes", {
         pagina: 'Proximos viajes',
@@ -26,7 +26,7 @@ module.exports = function(){
       .catch(error => console.log(error))
   });
 
-  router.get("/viajes/:id", (req, res) => { //Definimos ruta para Inicio
+  router.get("/viajes/:id", (req, res) => { //definimos ruta para detalles del viaje
     Viaje.findOne({
       where: {
         id: req.params.id
@@ -37,6 +37,12 @@ module.exports = function(){
       }))
       .catch(error => console.log(error))
 
+  });
+
+  router.get("/testimoniales", (req, res) => { //Definimos ruta para Testimoniles
+    res.render("testimoniales", {
+      pagina: 'Testimoniales'
+    });
   });
 
   return router;
