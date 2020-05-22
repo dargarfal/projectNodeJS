@@ -3,6 +3,7 @@ const express = require("express"); //importamos Express
 require('dotenv').config();// Requerimos "dotenv" para definir y configuarar las var de entorno
 const path = require('path'); //Importamos path para el manejo de las rutas dentro del proyecto
 const routes = require('./routes'); 
+const bodyParser = require('body-parser'); //Requerimos el body-parser
 
 
 const configs = require('./config');
@@ -40,6 +41,9 @@ app.use((req, res, next) => {
   //console.log(res.locals);
   return next();
 })
+
+//ejecutamos el body-parser
+app.use(bodyParser.urlencoded({extended: true}));
 
 //Cargando rutas -----------------------------------------------------
 app.use('/', routes());
