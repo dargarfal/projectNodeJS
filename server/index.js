@@ -38,6 +38,7 @@ app.use((req, res, next) => {
   //crear nueva fecha
   const fecha = new Date();
   res.locals.fechaActual = fecha.getFullYear();
+  res.locals.ruta = req.path; //req.pat nos retorna la ruta en la que se enuentra Ex: /ruta
   //console.log(res.locals);
   return next();
 })
