@@ -49,8 +49,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 //Cargando rutas -----------------------------------------------------
 app.use('/', routes());
 
-//Corriendo el servidor ----------------------------------------------
-const PORT = process.env.PORT || 3333; //Traemos el puerto desde el fichero ".env"
-app.listen(PORT, () => {
+//Corriendo el servidor----------------------------------------------
+const HOST = process.env.HOST || '0.0.0.0';
+const PORT = process.env.PORT || 3000; //Traemos el puerto desde el fichero ".env"
+app.listen(PORT, HOST, () => {
   console.log(`Servidor escuchando en puerto ${PORT}`);
 });
